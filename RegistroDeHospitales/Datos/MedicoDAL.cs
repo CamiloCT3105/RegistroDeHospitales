@@ -65,6 +65,7 @@ namespace PersonalMedicoApp.Datos
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+
         }
     }
 }
