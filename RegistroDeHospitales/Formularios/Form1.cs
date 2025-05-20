@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PersonalMedicoApp.Modelos;
-using PersonalMedicoApp.Datos;
+using RegistroDeHospitales.Modelos;
+using RegistroDeHospitales.Datos;
 
 namespace RegistroDeHospitales.Formularios
 {
