@@ -5,9 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PersonalMedicoApp.Modelos;
+using RegistroDeHospitales.Modelos;
 
-namespace PersonalMedicoApp.Datos
+namespace RegistroDeHospitales.Datos
 {
     public class MedicoDAL
     {
