@@ -54,6 +54,24 @@
     <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.Designer.cs">
       <DependentUpon>FrmConsultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datos\AsignacionDAL.cs" />
+    <Compile Include="Datos\CamaDAL.cs" />
+    <Compile Include="Datos\SalaDAL.cs" />
+    <Compile Include="Formularios\FormDashboardAdmin\FormDashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormGestionSalasYCamas\FormGestionSalasYCamas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormGestionSalasYCamas\FrmCamaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormGestionSalasYCamas\FrmSalaDialog .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\AsignacionCama.cs" />
+    <Compile Include="Modelos\Cama.cs" />
+    <Compile Include="Modelos\Sala.cs" />
     <Compile Include="Formularios\FormPersonalMedico\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +96,17 @@
     <Compile Include="Datos\PacienteRepository.cs" />
     <EmbeddedResource Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.resx">
       <DependentUpon>FrmConsultas.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FormDashboardAdmin\FormDashboardAdmin.resx">
+      <DependentUpon>FormDashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormGestionSalasYCamas\FormGestionSalasYCamas.resx">
+      <DependentUpon>FormGestionSalasYCamas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormGestionSalasYCamas\FrmCamaDialog.resx">
+      <DependentUpon>FrmCamaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormGestionSalasYCamas\FrmSalaDialog .resx">
+      <DependentUpon>FrmSalaDialog .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormLogin\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -87,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPersonalMedico\FormAsignarPersonal .resx">
       <DependentUpon>FormAsignarPersonal .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormPrincipal\FormPrincipal.resx">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\RegistroDeHospitales.Formularios.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\RegistroDeHospitales.Formularios.FormLogin.resources" />
@@ -133,9 +159,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Formularios\FormLogin\FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormPrincipal\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Formularios\FrmPacientes.resx">
