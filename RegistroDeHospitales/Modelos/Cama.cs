@@ -1,6 +1,5 @@
 ﻿using System;
 
-
     namespace RegistroDeHospitales.Modelos
 {
     public class Cama
@@ -10,6 +9,7 @@
         public string Especializacion { get; set; } // General, UCI, etc.
         public string Estado { get; set; } // Disponible / Ocupada
         public int SalaID { get; set; } // Relación con sala
+        public string Codigo { get; internal set; }
     }
 }
-}
+

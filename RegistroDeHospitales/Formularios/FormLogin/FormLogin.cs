@@ -51,7 +51,7 @@ namespace RegistroDeHospitales.Formularios
                 {
                     case "Admin":
                         Console.WriteLine("Funcionalidad de Admin no implementada aún.");
-                        formDestino = new FrmPacientes();
+                        formDestino = new FormDashboardAdmin();
                         break;
                     case "Medico":
                         formDestino = new Form1();

@@ -48,7 +48,7 @@ namespace RegistroDeHospitales.Datos
                         Nombre = reader["Nombre"].ToString(),
                         Apellido = reader["Apellido"].ToString(),
                         FechaNacimiento = (DateTime)reader["FechaNacimiento"],
-                        ContactoEmergencia = (int)reader["ContactoEmergencia"]
+                        ContactoEmergencia = (long)reader["ContactoEmergencia"] // ← CORRECTO
                     });
                 }
 
@@ -56,6 +56,12 @@ namespace RegistroDeHospitales.Datos
             }
 
             return lista;
+        }
+
+
+        public List<Paciente> ObtenerTodos()
+        {
+            return Listar();
         }
 
         public void Actualizar(Paciente paciente)
