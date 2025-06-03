@@ -1,96 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{E6BB957A-15F6-4054-95C7-10ED9709433E}</ProjectGuid>
-		<OutputType>WinExe</OutputType>
-		<RootNamespace>RegistroDeHospitales</RootNamespace>
-		<AssemblyName>RegistroDeHospitales</AssemblyName>
-		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-		<Deterministic>true</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Deployment" />
-		<Reference Include="System.Drawing" />
-		<Reference Include="System.Net.Http" />
-		<Reference Include="System.Windows.Forms" />
-		<Reference Include="System.Xml" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Compile Include="Formularios\Form1.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Formularios\Form1.Designer.cs">
-			<DependentUpon>Form1.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Modelos\Medico.cs" />
-		<Compile Include="Datos\MedicoDAL.cs" />
-		<Compile Include="Program.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<EmbeddedResource Include="Formularios\Form1.resx">
-			<DependentUpon>Form1.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Properties\Resources.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-			<SubType>Designer</SubType>
-		</EmbeddedResource>
-		<Compile Include="Properties\Resources.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resources.resx</DependentUpon>
-		</Compile>
-		<None Include="Properties\Settings.settings">
-			<Generator>SettingsSingleFileGenerator</Generator>
-			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		</None>
-		<Compile Include="Properties\Settings.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Settings.settings</DependentUpon>
-			<DesignTimeSharedInput>True</DesignTimeSharedInput>
-		</Compile>
-		<Compile Include="Formularios\FormLogin\FormLogin.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Formularios\FormPrincipal\FormPrincipal.cs">
-			<SubType>Form</SubType>
-		</Compile>
-        <EmbeddedResource Include="Formularios\FrmPacientes.resx">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6BB957A-15F6-4054-95C7-10ED9709433E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RegistroDeHospitales</RootNamespace>
+    <AssemblyName>RegistroDeHospitales</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Consulta.cs" />
+    <Compile Include="Datos\ConsultaRepository.cs" />
+    <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.Designer.cs">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormPersonalMedico\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormPersonalMedico\FormAsignarPersonal .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPacientes.Designer.cs">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Medico.cs" />
+    <Compile Include="Datos\MedicoDAL.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\LoginServicio.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="Modelos\Paciente.cs" />
+    <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\PacienteRepository.cs" />
+    <EmbeddedResource Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.resx">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormLogin\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormPersonalMedico\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormPersonalMedico\FormAsignarPersonal .resx">
+      <DependentUpon>FormAsignarPersonal .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormPrincipal\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\RegistroDeHospitales.Formularios.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\RegistroDeHospitales.Formularios.FormLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\RegistroDeHospitales.Formularios.FrmPacientes.resources" />
+    <EmbeddedResource Include="obj\Debug\RegistroDeHospitales.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -100,6 +104,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\RegistroDeHospitales\CopilotIndices\17.13.444.19527\CodeChunks.db" />
+    <None Include=".vs\RegistroDeHospitales\CopilotIndices\17.13.444.19527\SemanticSymbols.db" />
+    <None Include=".vs\RegistroDeHospitales\FileContentIndex\0ac6548b-0d80-4d68-bbc1-b62b26df5c15.vsidx" />
+    <None Include=".vs\RegistroDeHospitales\FileContentIndex\2a5a7f7b-1f2c-42ae-ab34-114d4061f9ab.vsidx" />
+    <None Include=".vs\RegistroDeHospitales\FileContentIndex\373fe73f-3261-4f85-a9eb-cb4e3fde5907.vsidx" />
+    <None Include=".vs\RegistroDeHospitales\FileContentIndex\4f575f8e-5587-4428-9078-16384e7e1c0b.vsidx" />
+    <None Include=".vs\RegistroDeHospitales\FileContentIndex\a3639d0e-b663-40a7-92e3-94aa77125928.vsidx" />
+    <None Include=".vs\RegistroDeHospitales\v17\DocumentLayout.backup.json" />
+    <None Include=".vs\RegistroDeHospitales\v17\DocumentLayout.json" />
+    <None Include=".vs\RegistroDeHospitales\v17\ResourceExplorer\settings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="bin\Debug\RegistroDeHospitales.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\RegistroDeHospitales.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\RegistroDeHospitales.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\RegistroDeHospitales.csproj.GenerateResource.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,14 +132,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="App.config" />
-	</ItemGroup>
-
-	<ItemGroup />
-
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Compile Include="Formularios\FormLogin\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormPrincipal\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Formularios\FrmPacientes.resx">
+      <DependentUpon>FrmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\RegistroDeHospitales.exe" />
+    <Content Include="bin\Debug\RegistroDeHospitales.pdb" />
+    <Content Include="obj\Debug\RegistroDeHospitales.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\RegistroDeHospitales.exe" />
+    <Content Include="obj\Debug\RegistroDeHospitales.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\RegistroDeHospitales\copilot-chat\68580590\sessions\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
- 

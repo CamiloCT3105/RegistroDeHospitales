@@ -1,5 +1,8 @@
 using System;
 using System.Windows.Forms;
+using RegistroDeHospitales.Modelos;
+using RegistroDeHospitales.Servicios;
+using RegistroDeHospitales.Formularios;
 
 namespace RegistroDeHospitales.Formularios
 {
@@ -33,17 +36,61 @@ namespace RegistroDeHospitales.Formularios
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            // Validación de ejemplo:
-            if (txtUsuario.Text == "admin" && txtContrasena.Text == "123")
+            string usuario = txtUsuario.Text.Trim();
+            string clave = txtContrasena.Text.Trim();
+
+            Usuario usuarioLogueado = LoginServicio.ValidarLogin(usuario, clave);
+
+            if (usuarioLogueado != null)
             {
-                FormPrincipal principal = new FormPrincipal();
-                principal.Show();
+                MessageBox.Show($"Bienvenido, {usuarioLogueado.NombreUsuario} (Rol: {usuarioLogueado.Rol})");
+
+                Form formDestino;
+
+                switch (usuarioLogueado.Rol)
+                {
+                    case "Admin":
+                        Console.WriteLine("Funcionalidad de Admin no implementada aún.");
+                        formDestino = new FrmPacientes();
+                        break;
+                    case "Medico":
+                        formDestino = new Form1();
+                        Console.WriteLine("Funcionalidad de Medico no implementada aún.");
+                        break;
+                    case "Recepcion":
+                        formDestino = new Form1();
+                        Console.WriteLine("Funcionalidad de Recepción no implementada aún.");
+                        break;
+                    default:
+                        MessageBox.Show("Rol no reconocido.");
+                        return;
+                }
+
+                formDestino.Show();
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Credenciales incorrectas.");
             }
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // FormLogin
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

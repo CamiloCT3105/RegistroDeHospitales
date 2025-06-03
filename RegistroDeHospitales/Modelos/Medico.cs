@@ -13,5 +13,6 @@ namespace RegistroDeHospitales.Modelos
         public string Especializacion { get; set; }
         public string Horario { get; set; }
         public string Licencia { get; set; }
+        public string Rol { get; set; } 
     }
 }

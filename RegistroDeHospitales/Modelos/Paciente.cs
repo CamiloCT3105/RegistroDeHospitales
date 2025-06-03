@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegistroDeHospitales.Entidades
+namespace RegistroDeHospitales.Modelos
 {
     public class Paciente
     {
