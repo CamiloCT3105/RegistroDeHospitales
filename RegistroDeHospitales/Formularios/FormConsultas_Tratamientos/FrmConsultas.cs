@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroDeHospitales.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,42 @@ namespace RegistroDeHospitales.Formularios.FormConsultas_Tratamientos
 {
     public partial class FrmConsultas : Form
     {
+
+        private ConsultaRepository repo = new ConsultaRepository();
         public FrmConsultas()
         {
             InitializeComponent();
+            CargarCombos();
+            CargarConsultas();
+        }
+
+        private void CargarCombos()
+        {
+            // TODO: llenar cmbPacientes y cmbMedicos desde BD usando listas
+        }
+
+        private void CargarConsultas()
+        {
+            dgvConsultas.DataSource = null;
+            dgvConsultas.DataSource = repo.Listar();
+        }
+
+        private void btnProgramar_Click(object sender, EventArgs e)
+        {
+            if (cmbPacientes.SelectedItem != null && cmbMedicos.SelectedItem != null)
+            {
+                Consulta c = new Consulta
+                {
+                    PacienteID = (int)cmbPacientes.SelectedValue,
+                    MedicoID = (int)cmbMedicos.SelectedValue,
+                    FechaConsulta = dtpFechaConsulta.Value,
+                    TipoConsulta = txtTipoConsulta.Text
+                };
+
+                repo.ProgramarConsulta(c);
+                MessageBox.Show("Consulta programada.");
+                CargarConsultas();
+            }
         }
     }
 }

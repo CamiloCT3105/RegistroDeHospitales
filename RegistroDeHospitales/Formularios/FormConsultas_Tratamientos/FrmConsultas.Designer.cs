@@ -116,6 +116,7 @@
             this.btnProgramar.TabIndex = 8;
             this.btnProgramar.Text = "Programar";
             this.btnProgramar.UseVisualStyleBackColor = true;
+            this.btnProgramar.Click += new System.EventHandler(this.btnProgramar_Click);
             // 
             // dgvConsultas
             // 
