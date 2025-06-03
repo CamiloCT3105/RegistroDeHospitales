@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Consulta.cs" />
+    <Compile Include="Datos\ConsultaRepository.cs" />
+    <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.Designer.cs">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos\AsignacionDAL.cs" />
     <Compile Include="Datos\CamaDAL.cs" />
     <Compile Include="Datos\SalaDAL.cs" />
@@ -86,6 +94,8 @@
     <Compile Include="Modelos\Paciente.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\PacienteRepository.cs" />
+    <EmbeddedResource Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.resx">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
     <EmbeddedResource Include="Formularios\FormDashboardAdmin\FormDashboardAdmin.resx">
       <DependentUpon>FormDashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
