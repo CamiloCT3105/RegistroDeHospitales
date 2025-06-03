@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Consulta.cs" />
+    <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.Designer.cs">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormPersonalMedico\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +75,9 @@
     <Compile Include="Modelos\Paciente.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\PacienteRepository.cs" />
+    <EmbeddedResource Include="Formularios\FormConsultas_Tratamientos\FrmConsultas.resx">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormLogin\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
