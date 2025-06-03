@@ -1,4 +1,5 @@
 ﻿using RegistroDeHospitales.Datos;
+using RegistroDeHospitales.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,9 +54,23 @@ namespace RegistroDeHospitales.Formularios.FormConsultas_Tratamientos
                     TipoConsulta = txtTipoConsulta.Text
                 };
 
+                string tipoConsulta = txtTipoConsulta.Text.ToLower();
+                string especialidadMedico = "";
+
+                var medico = (Medico)cmbMedicos.SelectedItem;
+                especialidadMedico = medico.Especializacion.ToLower();
+
+                if (!tipoConsulta.Contains(especialidadMedico))
+                {
+                    MessageBox.Show("El médico seleccionado no tiene la especialización adecuada para esta consulta.");
+                    return;
+                }
+
                 repo.ProgramarConsulta(c);
                 MessageBox.Show("Consulta programada.");
                 CargarConsultas();
+
+
             }
         }
     }
