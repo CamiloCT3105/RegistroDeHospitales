@@ -24,7 +24,15 @@ namespace RegistroDeHospitales.Formularios.FormConsultas_Tratamientos
 
         private void CargarCombos()
         {
-            // TODO: llenar cmbPacientes y cmbMedicos desde BD usando listas
+            var pacienteRepo = new PacienteRepository();
+            cmbPacientes.DataSource = pacienteRepo.Listar();
+            cmbPacientes.DisplayMember = "Nombre";
+            cmbPacientes.ValueMember = "PacienteID";
+
+            var medicoRepo = new MedicoDAL();
+            cmbMedicos.DataSource = medicoRepo.ObtenerTodos();
+            cmbMedicos.DisplayMember = "Nombre";
+            cmbMedicos.ValueMember = "MedicoID";
         }
 
         private void CargarConsultas()
