@@ -1,4 +1,4 @@
-﻿using RegistroDeHospitales.Entidades;
+﻿using RegistroDeHospitales.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
