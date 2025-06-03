@@ -85,5 +85,23 @@ namespace RegistroDeHospitales.Formularios
                 MessageBox.Show("Error al asignar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // FormAsignarPersonal
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "FormAsignarPersonal";
+            this.Load += new System.EventHandler(this.FormAsignarPersonal_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void FormAsignarPersonal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

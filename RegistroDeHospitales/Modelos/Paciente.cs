@@ -12,6 +12,7 @@ namespace RegistroDeHospitales.Modelos
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public int ContactoEmergencia { get; set; }
+        public long ContactoEmergencia { get; set; } // ← CORRECTO
     }
+
 }
